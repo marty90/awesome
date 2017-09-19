@@ -38,7 +38,7 @@ It classifies the input trace `dataset_awesome.csv` and provides the output in `
 The latter file is a copy of the input one, with an extra column (in last position) indicating the result of the classification.
 This extra column contains the name of the service that **AWESoME** accounted that flow to.
 
-You can verify that more that 95% of flows have the corect label with:
+You can verify that more that 95% of flows have the correct label with:
 ```
 $ echo $(awk -F, '$4==$5' classified_flows.csv  | wc -l)*100/$(cat classified_flows.csv | wc -l)  | bc
 95
